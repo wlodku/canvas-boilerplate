@@ -1,11 +1,13 @@
+import { Player } from './player.js'; 
+
 window.addEventListener('load', () => {
-    let canva = document.getElementById('root');
+    const canva = document.getElementById('root');
     canva.width = window.innerWidth;
     canva.height = window.innerHeight;
 
-    let c = canva.getContext('2d');
+    const c = canva.getContext('2d');
 
-    let player1 = new Player(100, 200);
+    const player1 = new Player(100, 200);
 
     function update(delta) {
         player1.update(delta);
