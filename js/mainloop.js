@@ -726,8 +726,4 @@ else if (typeof exports === 'object') {
     module.exports = root.MainLoop;
 }
 
-export { MainLoop} 
-
 })(this);
-
-
