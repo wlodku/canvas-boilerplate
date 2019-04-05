@@ -1,4 +1,4 @@
-import { Player } from './player.js'; 
+import { Player } from './player.js';
 
 window.addEventListener('load', () => {
     const canva = document.getElementById('root');

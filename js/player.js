@@ -8,15 +8,16 @@ class Player {
     }
 
     update(delta) {
-        // delta == last frame duration  
+        // delta == last frame duration
         this.x += this.velocity;
         if (this.x >= this.limit || this.x <= 0)
             this.velocity = -this.velocity;
     }
 
     draw(c) {
+        c.fillStyle = "blue";
         c.fillRect(this.x, this.y, 100, 100);
     }
 }
 
-export { Player } 
+export { Player }
