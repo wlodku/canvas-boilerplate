@@ -10,14 +10,23 @@ window.addEventListener('load', () => {
     const player1 = new Player(100, 200);
 
     function update(delta) {
-        player1.update(delta);
+      player1.update(delta);
     }
 
     function draw() {
-        c.clearRect(0, 0, canva.width, canva.height);
-        player1.draw(c);
+      c.clearRect(0, 0, canva.width, canva.height);
+      player1.draw(c);
     }
 
-    MainLoop.setUpdate(update).setDraw(draw).start();
+    function mainLoop(timestamp) {
+      console.log(timestamp);
+      update();
+      draw();
+      requestAnimationFrame(mainLoop);
+    }
+
+    // MainLoop.setUpdate(update).setDraw(draw).start();
+    requestAnimationFrame(mainLoop);
+
 
 });
