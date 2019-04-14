@@ -19,13 +19,12 @@ window.addEventListener('load', () => {
     }
 
     function mainLoop(timestamp) {
-      console.log(timestamp);
+       // timestamp - you can use it e.g. to calculate delta time from last frame      
       update();
       draw();
       requestAnimationFrame(mainLoop);
     }
 
-    // MainLoop.setUpdate(update).setDraw(draw).start();
     requestAnimationFrame(mainLoop);
 
 
